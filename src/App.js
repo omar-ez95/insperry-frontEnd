@@ -5,8 +5,10 @@ import { Routes ,Route, Switch  } from 'react-router-dom';
 import {BrowserRouter as Router} from "react-router-dom"
 
 import axios from "axios";
-import Main from "./pages/Main"
 import "./static/styles.scss"
+
+import Main from "./pages/Main"
+import Rescategory from "./pages/Rescategory"
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
             {/* <Rescategorys/> */}    
             <Routes>
                 <Route exact path="/" element={<Main/>} />
+                <Route exact path="/rescategory/:RescategoryName" element={<Rescategory/>} />
             </Routes>
         </Fragment>
     </Router>

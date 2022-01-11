@@ -2,24 +2,25 @@ import React, {useState, useEffect} from "react"
 import axios from "axios";
 import PropTypes from "prop-types";
 import { Row } from "react-bootstrap";
-import Card from "./common/card"
-function Rescategorys(){
-
-    const [rescategorys,setRescategorys]=useState([])
+import Card from "../common/card"
+import {useParams} from "react-router-dom"
+function RestaurantsCards(){
+    const {RescategoryName} = useParams()
+    const [restaurants,setRestaurants]=useState([])
 
     useEffect(() => {
-      axios.get('http://18.192.205.152/api/rescategorys/',
+      axios.get(`http://18.192.205.152/app/api/rescategory/${RescategoryName}`,
         { crossDomain: true },
         { withCredentials: true })
         .then(response => {
-            setRescategorys( response.data)
+            setRestaurants( response.data)
       });
 
   }, [])
 
-    const cards = rescategorys.map(
-        rescategory => (     
-            <Card item={rescategory} link={`/rescategory/${rescategory.name}`} />    
+    const cards = restaurants.map(
+        restaurant => (     
+            <Card item={restaurant} link={`/rescategory/${restaurant.id}`} />    
         ))
 
     return(
@@ -38,7 +39,7 @@ function Rescategorys(){
     )
 }
 
-Rescategorys.propTypes={
-    rescategorys: PropTypes.array
+RestaurantsCards.propTypes={
+    restaurants: PropTypes.array
 }
-export default Rescategorys
+export default RestaurantsCards
