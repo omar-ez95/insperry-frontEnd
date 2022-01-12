@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="66" viewBox="0 0 42 66">
+  <g id="Comment" transform="translate(-276 -746)">
+    <rect id="Rechteck_24" data-name="Rechteck 24" width="42" height="66" rx="21" transform="translate(276 746)" opacity="0.3"/>
+    <g id="Gruppe_6" data-name="Gruppe 6" transform="translate(0 59)" opacity="0.8">
+      <path id="Differenzmenge_9" data-name="Differenzmenge 9" d="M19-978a18.876,18.876,0,0,1-13.435-5.565A18.876,18.876,0,0,1,0-997a18.876,18.876,0,0,1,5.565-13.435A18.875,18.875,0,0,1,19-1016a18.875,18.875,0,0,1,13.435,5.565A18.876,18.876,0,0,1,38-997a18.876,18.876,0,0,1-5.565,13.435A18.876,18.876,0,0,1,19-978Zm12.5-22a3.5,3.5,0,0,0-3.5,3.5,3.5,3.5,0,0,0,3.5,3.5,3.5,3.5,0,0,0,3.5-3.5A3.5,3.5,0,0,0,31.5-1000Zm-12,0a3.5,3.5,0,0,0-3.5,3.5,3.5,3.5,0,0,0,3.5,3.5,3.5,3.5,0,0,0,3.5-3.5A3.5,3.5,0,0,0,19.5-1000Zm-12,0A3.5,3.5,0,0,0,4-996.5,3.5,3.5,0,0,0,7.5-993a3.5,3.5,0,0,0,3.5-3.5A3.5,3.5,0,0,0,7.5-1000Z" transform="translate(278 1707)" fill="#fff"/>
+    </g>
+    <text id="_215" data-name="215" transform="translate(289 800)" fill="#fff" font-size="12" font-family="NSimSun"><tspan x="0" y="0">215</tspan></text>
+  </g>
+</svg>

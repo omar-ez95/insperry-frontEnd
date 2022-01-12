@@ -20,7 +20,7 @@ function RestaurantsCards(){
 
     const cards = restaurants.map(
         restaurant => (     
-            <Card item={restaurant} link={`/rescategory/${restaurant.id}`} />    
+            <Card key={restaurant.id} item={restaurant} link={`/restaurant/${restaurant.id}`} />    
         ))
 
     return(

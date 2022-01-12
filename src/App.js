@@ -9,6 +9,7 @@ import "./static/styles.scss"
 
 import Main from "./pages/Main"
 import Rescategory from "./pages/Rescategory"
+import Restaurant from "./pages/Restaurant"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Routes>
                 <Route exact path="/" element={<Main/>} />
                 <Route exact path="/rescategory/:RescategoryName" element={<Rescategory/>} />
+                <Route exact path="/restaurant/:RestaurantId" element={<Restaurant/>} />
             </Routes>
         </Fragment>
     </Router>

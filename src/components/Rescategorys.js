@@ -19,7 +19,7 @@ function Rescategorys(){
 
     const cards = rescategorys.map(
         rescategory => (     
-            <Card item={rescategory} link={`/rescategory/${rescategory.name}`} />    
+            <Card key={rescategory.id} item={rescategory} link={`/rescategory/${rescategory.name}`} />    
         ))
 
     return(

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28">
+  <g id="warning" transform="translate(-16 -511.97)">
+    <ellipse id="Ellipse_168" data-name="Ellipse 168" cx="13" cy="13" rx="13" ry="13" transform="translate(16 513.969)" opacity="0.5"/>
+    <g id="Ellipse_180" data-name="Ellipse 180" transform="translate(16 513.969)" fill="none" stroke="#fff" stroke-width="1">
+      <ellipse cx="13" cy="13" rx="13" ry="13" stroke="none"/>
+      <ellipse cx="13" cy="13" rx="12.5" ry="12.5" fill="none"/>
+    </g>
+    <text id="_" data-name="!" transform="translate(26 534.97)" fill="#fff" font-size="21" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">!</tspan></text>
+  </g>
+</svg>

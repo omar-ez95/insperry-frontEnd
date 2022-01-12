@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95" height="86" viewBox="0 0 95 86">
+  <defs>
+    <filter id="Polygon_1" x="0" y="0" width="95" height="86" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.949"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Comment_Send_Button" transform="translate(-1528.5 -929.5)">
+    <g transform="matrix(1, 0, 0, 1, 1528.5, 929.5)" filter="url(#Polygon_1)">
+      <path id="Polygon_1-2" data-name="Polygon 1" d="M42.992,0A10,10,0,0,1,51.64,4.981l10.446,18a10,10,0,0,1,0,10.039l-10.446,18A10,10,0,0,1,42.992,56H22.008a10,10,0,0,1-8.649-4.981l-10.446-18a10,10,0,0,1,0-10.039l10.446-18A10,10,0,0,1,22.009,0Z" transform="translate(15 15)" fill="#1a1a1a"/>
+    </g>
+    <g id="Comment_Send" transform="translate(1558 954.5)">
+      <path id="Path_4" data-name="Path 4" d="M33,3,16.5,19.5" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_5" data-name="Path 5" d="M33,3,22.5,33l-6-13.5L3,13.5Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

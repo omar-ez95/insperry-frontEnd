@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="66" viewBox="0 0 42 66">
+  <g id="Share" transform="translate(-107 -746)">
+    <rect id="Rechteck_23" data-name="Rechteck 23" width="42" height="66" rx="21" transform="translate(107 746)" opacity="0.3"/>
+    <g id="Gruppe_5" data-name="Gruppe 5" transform="translate(0 59)" opacity="0.8">
+      <path id="Differenzmenge_14" data-name="Differenzmenge 14" d="M19-978a18.974,18.974,0,0,1-9.754-2.692A19.1,19.1,0,0,1,2.4-987.743a16.074,16.074,0,0,1,5.942-3.934A21.275,21.275,0,0,1,16-993h4.5v9L34-998.22,20.5-1011v9h-.006c-10.282,0-16.825,3.045-20,9.309A19.1,19.1,0,0,1,0-997a18.876,18.876,0,0,1,5.565-13.435A18.875,18.875,0,0,1,19-1016a18.875,18.875,0,0,1,13.435,5.565A18.876,18.876,0,0,1,38-997a18.876,18.876,0,0,1-5.565,13.435A18.876,18.876,0,0,1,19-978Z" transform="translate(109 1707)" fill="#fff"/>
+    </g>
+    <text id="_250" data-name="250" transform="translate(120 800)" fill="#fff" font-size="12" font-family="NSimSun"><tspan x="0" y="0">250</tspan></text>
+  </g>
+</svg>

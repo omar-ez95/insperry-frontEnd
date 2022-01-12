@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+  <g id="user" transform="translate(-16 -543)">
+    <g id="Group_189" data-name="Group 189" transform="translate(0 -70)">
+      <circle id="Ellipse_166" data-name="Ellipse 166" cx="17" cy="17" r="17" transform="translate(16 613)" opacity="0.5"/>
+      <g id="Ellipse_178" data-name="Ellipse 178" transform="translate(16 613)" fill="none" stroke="#fff8f8" stroke-width="1">
+        <circle cx="17" cy="17" r="17" stroke="none"/>
+        <circle cx="17" cy="17" r="16.5" fill="none"/>
+      </g>
+    </g>
+    <path id="Icon_awesome-user-plus" data-name="Icon awesome-user-plus" d="M21.879,7.293H19.635V5.049a.563.563,0,0,0-.561-.561H17.952a.563.563,0,0,0-.561.561V7.293H15.147a.563.563,0,0,0-.561.561V8.976a.563.563,0,0,0,.561.561h2.244v2.244a.563.563,0,0,0,.561.561h1.122a.563.563,0,0,0,.561-.561V9.537h2.244a.563.563,0,0,0,.561-.561V7.854A.563.563,0,0,0,21.879,7.293ZM7.854,8.976A4.488,4.488,0,1,0,3.366,4.488,4.488,4.488,0,0,0,7.854,8.976ZM11,10.1H10.41a6.1,6.1,0,0,1-5.112,0H4.712A4.714,4.714,0,0,0,0,14.811v1.459a1.683,1.683,0,0,0,1.683,1.683H14.025a1.683,1.683,0,0,0,1.683-1.683V14.811A4.714,4.714,0,0,0,11,10.1Z" transform="translate(21.9 551)" fill="#fff"/>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="172" height="172" viewBox="0 0 172 172">
+  <g id="Like" transform="translate(-309 -520)">
+    <g id="Like_Product" opacity="0.8">
+      <circle id="Ellipse_26" data-name="Ellipse 26" cx="26" cy="26" r="26" transform="translate(369 580)" opacity="0.5"/>
+      <path id="Icon_awesome-heart" data-name="Icon awesome-heart" d="M29.384,4.195a8.692,8.692,0,0,0-11.86.864l-1.252,1.29-1.252-1.29a8.691,8.691,0,0,0-11.86-.864A9.127,9.127,0,0,0,2.53,17.409l12.3,12.7a1.993,1.993,0,0,0,2.879,0l12.3-12.7a9.121,9.121,0,0,0-.623-13.214Z" transform="translate(378.252 589.515)" fill="#fff"/>
+    </g>
+    <text id="_235" data-name="235" transform="translate(386 633)" fill="#fff" font-size="12" font-family="NSimSun"><tspan x="0" y="0">235</tspan></text>
+  </g>
+</svg>

@@ -1,6 +1,6 @@
 body {
     background-color: #252A34 !important;
-    color:#EAEAEA !important;
+    color:#EAEAEA ;
   }
   
   .container-fluid {
@@ -237,9 +237,9 @@ body {
   }
   
   .close-btn{
-    position: fixed;
-    top: 15px;
-    right: 15px;
+    position: absolute;
+    top: 18%;
+    right: 10%;
     max-width: 15px;
     z-index: 1000000;
   }
@@ -271,15 +271,7 @@ body {
   setMarginBottom{
     margin-bottom: 0px !important;
   }
-  .product-commets-text .image-holder {
-    width: 45px;
-    text-align: center;
-  }
-  .product-commets-text .image-holder img{
-    width: 45px;
-    border-radius: 8px;
-  }
-  
+ 
   .product-commets-text .text-box {
     flex: 1;
     width: 100%;
@@ -400,3 +392,126 @@ body {
     text-align: center;
     font-family: 'Cabin Sketch' !important;
   }
+
+  .restaurant-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    width:100%;
+    
+  }
+  .restaurant-video{
+    overflow: hidden;
+    border-radius: 3px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .restaurant-video-margin{
+    margin-left: 0px;
+  }
+  .restaurant-modal-padding{
+    padding: 2%;
+    overflow-y: auto;
+    max-height: 100vh;
+  }
+  .restaurant-modal{
+    margin-bottom: 20px;
+    background-color: rgba(234, 234, 234, 0.33);
+    padding: 20px;
+    border-radius: 19px;
+    box-shadow: 0px 0px 5px #EAEAEA;
+  }
+  .liWidth{
+    width: 40px;
+      margin: 10px;
+  }
+
+  .carousel-indicators1{
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .carousel-indicators {
+    flex-wrap: wrap;
+}
+
+.restaurant-buttons{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right:30px ;
+}
+.restaurant-buttons li{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.buttons-color{
+  background-color: #FF2E63;
+  border-radius: 50%;
+}
+
+.restaurant-name{
+  max-height: 15%;
+  font-family: 'Cabin Sketch' !important;
+  box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  font-family: sans-serif;
+  text-align: center;
+  line-height: 1;
+  -webkit-backdrop-filter: blur(150px);
+  backdrop-filter: blur(150px);
+  letter-spacing: 0.50em;
+  margin-top: 25px;
+  padding: 10px;
+}
+
+.restaurant-img{
+  overflow: hidden;
+  border-radius: 3px;
+  width: auto;
+  height: 100vh;
+}
+
+.restaurant-logo{
+  
+  border-style: none;
+  margin-top: 25px;
+  height: 150px;
+  width: 300px;
+}
+
+.comments-modal{
+  overflow-y: auto;
+}
+.comment-box{
+  border: 1px solid #08D9D6;
+  box-shadow: 0px 0px 5px #08D9D6;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.comment-image-holder{
+  margin-right: 5px;
+
+}
+
+.comment-image-holder img{
+  box-shadow: 0px 0px 5px #EAEAEA;
+  position: relative;
+  top: 10px;
+  width: 60px;
+  border-radius: 40%;
+  
+}
