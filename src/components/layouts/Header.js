@@ -80,7 +80,7 @@ function Header() {
         </Link>
       </li>
       <li>
-        <Link to="/register">Register</Link>
+        <Link to="/regestration">Register</Link>
       </li>
       <li>
         <Link to="/login">Login</Link>

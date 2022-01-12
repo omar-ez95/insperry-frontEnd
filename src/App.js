@@ -11,6 +11,7 @@ import Main from "./pages/Main"
 import Rescategory from "./pages/Rescategory"
 import Restaurant from "./pages/Restaurant"
 import Header from "./components/layouts/Header"
+import Register from "./components/accounts/Register"
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
                 <Route exact path="/" element={<Main/>} />
                 <Route exact path="/rescategory/:RescategoryName" element={<Rescategory/>} />
                 <Route exact path="/restaurant/:RestaurantId" element={<Restaurant/>} />
+                <Route exact path="/regestration" element={<Register/>} />
             </Routes>
             <Header/>
         </Fragment>
