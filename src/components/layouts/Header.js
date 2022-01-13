@@ -71,19 +71,19 @@ function Header() {
     <ul className="footer-links">
       <li>
         <Link to="/">
-          <SiHomebridge className="header-icons" />
+          <SiHomebridge className="header-icons red-color" />
         </Link>
       </li>
       <li>
         <Link to="/search">
-          <BiSearchAlt className="header-icons" />
+          <BiSearchAlt className="header-icons red-color" />
         </Link>
       </li>
       <li>
-        <Link to="/regestration">Register</Link>
+        <Link to="/regestration" className="red-color">Register</Link>
       </li>
       <li>
-        <Link to="/login">Login</Link>
+        <Link to="/login" className="red-color">Login</Link>
       </li>
     </ul>
   );

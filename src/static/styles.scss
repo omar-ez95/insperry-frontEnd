@@ -50,7 +50,7 @@ body {
     padding-bottom: 15px;
   }
   .cat-bottom {
-    background: linear-gradient(to bottom, transparent 10%, #111111 100%);
+    background: linear-gradient(to bottom, transparent 10%, #08D9D6 100%);
     position: fixed;
     left: 0;
     bottom: 0;
@@ -60,6 +60,7 @@ body {
     font-family: "segoeui";
   }
   .footer-links {
+    color: #FF2E63;
     z-index: 10000;
     margin-right: 5px;
     opacity: 0.8;
@@ -71,6 +72,9 @@ body {
     justify-content: space-between;
     margin: 0 -10px;
     position: relative;
+  }
+  .red-color{
+    color: #252A34 !important;
   }
   .cat-bottom .footer-links li {
     width: 20%;
@@ -369,7 +373,12 @@ body {
   font-size: 1.5rem;
   }
   
-  .form-group{color:white}
+  .form-group{color:white;
+
+  }
+  .form-control{
+    box-shadow: 0px 0px 5px #08D9D6;
+  }
   
   .mychoise-element {
     border-radius: 20px;
@@ -404,6 +413,7 @@ body {
     overflow: hidden;
     border-radius: 3px;
     width: 100%;
+    object-fit:cover;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -418,6 +428,7 @@ body {
     padding: 2%;
     overflow-y: auto;
     max-height: 100vh;
+    margin-bottom: 40px;
   }
   .restaurant-modal{
     margin-bottom: 20px;

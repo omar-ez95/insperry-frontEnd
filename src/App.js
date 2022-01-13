@@ -1,10 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
 import React, { Fragment} from "react"
-import { Routes ,Route, Switch  } from 'react-router-dom';
+import { Routes ,Route } from 'react-router-dom';
 import {BrowserRouter as Router} from "react-router-dom"
 
-import axios from "axios";
 import "./static/styles.scss"
 
 import Main from "./pages/Main"
@@ -12,6 +9,7 @@ import Rescategory from "./pages/Rescategory"
 import Restaurant from "./pages/Restaurant"
 import Header from "./components/layouts/Header"
 import Register from "./components/accounts/Register"
+import LogIn from "./components/accounts/LogIn"
 
 function App() {
   return (
@@ -23,6 +21,7 @@ function App() {
                 <Route exact path="/rescategory/:RescategoryName" element={<Rescategory/>} />
                 <Route exact path="/restaurant/:RestaurantId" element={<Restaurant/>} />
                 <Route exact path="/regestration" element={<Register/>} />
+                <Route exact path="/login" element={<LogIn/>} />
             </Routes>
             <Header/>
         </Fragment>

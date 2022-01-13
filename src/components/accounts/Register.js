@@ -1,36 +1,38 @@
-import { Link, Rediect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
+import { useNavigate} from "react-router-dom"
 
-function Register() {
+import {Context} from "../../contexts/UserContext"
+
+
+function Register(props) {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
+  
+  const navigate = useNavigate()
+  const {setUser, isAuthenticated, setIsAuthenticated, setToken} = useContext(Context)
+  
+  // if the user in logged in he will be redirected to the main page
+  useEffect(() => {
+    if(isAuthenticated){
+      navigate("/");
+     }
+  }, [isAuthenticated])
 
   const registeration = ({ username, password, email }) => {
-    // Headers
     var formData = new FormData();
     formData.append("username", username); 
     formData.append("password", password); 
     formData.append("email", email); 
-    console.log("resdatadddddddddddddd")
     const config = {
-
-      // crossDomain: true,
       headers: {
         'Content-Type': 'application/json',
-      //   'Access-Control-Allow-Credentials': 'true',
-
-      //   'Access-Control-Allow-Headers': "Origin, X-Requested-With, Content-Type, Accept",
-        
-      //  'Access-Control-Allow-Origin': '*',
       },
     };
-    // 'Access-Control-Allow-Headers': "Access-Control-Allow-Credentials,Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Origin",
-        
-    const body = JSON.stringify({ username, email, password });
     axios.defaults.xsrfCookieName = 'csrftoken'
     axios.defaults.xsrfHeaderName = 'X-CSRFToken'
     axios
@@ -40,24 +42,17 @@ function Register() {
         }
     })
       .then((res) => {
-        console.log(res.data,"resdata")
-        const users = res.data
-        // localStorage.setItem('jwt', users.auth_token)
-        // localStorage.setItem('user', JSON.stringify(users))
-        // const h = store.getState();
-        // const t = h.auth.token;
-        // axios.defaults.headers.common['Authorization'] = 'Token '+t;
+        setIsAuthenticated(true)
+        setToken(res.data.token)
+        setUser(res.data.user)
+        props.history.push("/");
       })
       .catch((err) => {
-        // dispatch(returnErrors(err.response.data, err.response.status));
-        // dispatch({
-        //   type: REGISTER_FAIL,
-        // });
+
       });
   };
 
   Register.propTypes = {
-    register: PropTypes.func.isRequired,
     isAuthenticated: PropTypes.bool,
   };
 
@@ -75,7 +70,7 @@ function Register() {
     }
   };
 
-  return (
+  const regeisterForm = (
     <div className="col-md-6 m-auto">
       <div className="card card-body mt-5">
         <h2 className="text-center">Register</h2>
@@ -131,6 +126,12 @@ function Register() {
         </form>
       </div>
     </div>
+  )
+  
+    
+
+  return (
+      regeisterForm 
   );
 }
 
