@@ -1,20 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 import { Row, Col } from "react-bootstrap";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import menu from '../../static/img/menu.png';
 import commentBtn from '../../static/img/commentBtn.png';
-import follow from '../../static/img/follow.png';
+import follow_n from '../../static/img/follow_n.png';
 
+import { Context } from "../../contexts/UserContext";
 import InfoModal from "./InfoModal"
 import RestaurnatComments from "./RestaurantComments"
 import Toggler from "../../customHooks/Toggler"
+import Follow from "./Follow"
 
 function RestaurantDetails() {
   const [show, toggle] = Toggler()
   const { RestaurantId } = useParams();
+  const {user, isAuthenticated, token} = useContext(Context)
   const [restaurant, setRestaurant] = useState({PLZ: "",
   address: "",
   bio: "",  
@@ -63,6 +67,7 @@ function RestaurantDetails() {
       )
       .then((response) => {
         setRestaurant(response.data[0]);
+        
       });
   }, []);
 
@@ -77,7 +82,7 @@ function RestaurantDetails() {
       <source src={restaurant.video} type="video/mp4" />
     </video>
   );
-
+    const follow = (<li><Follow restaurant={restaurant.id}/></li>)
   return (
     <Row>
       <Col xs="12" s="12" lg="4" >
@@ -97,7 +102,10 @@ function RestaurantDetails() {
           <ul className="restaurant-buttons">
             <li><img className="buttons-color" onClick={toggle} src={commentBtn} alt=""/></li>
             <li><img className="buttons-color" src={menu} alt=""/></li>
-            <li><img className="buttons-color" src={follow} alt=""/></li>
+            <li>{!isAuthenticated ? <Link to="/login" className="red-color">
+                  <img className="buttons-color"  src={follow_n} alt=""/>
+                  </Link> : restaurant.user ? <Follow restaurant={restaurant.user}/> : null
+                 }</li>
           </ul>
         </div>
         {show ? <RestaurnatComments restaurantId={restaurant.id}/>  : null}

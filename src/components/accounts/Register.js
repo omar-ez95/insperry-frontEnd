@@ -45,6 +45,8 @@ function Register(props) {
         setIsAuthenticated(true)
         setToken(res.data.token)
         setUser(res.data.user)
+        const userData = res.data
+          localStorage.setItem('userData', JSON.stringify(userData))
         props.history.push("/");
       })
       .catch((err) => {

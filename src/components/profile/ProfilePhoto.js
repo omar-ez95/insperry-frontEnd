@@ -1,25 +1,26 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-function ProfilePhoto({username}){
-    const [user, setUser]= useState({})
-    useEffect(() => {
-        axios
-          .get(
-            `http://18.192.205.152//api/profile/${username}`,
-            { crossDomain: true },
-            { withCredentials: true }
-          )
-          .then((response) => {
-            setUser(response.data);
-          });
-      }, []);
-
-
-      return(
-        <img src={user.picture}/>
+function ProfilePhoto(props) {
+  const [user, setUser] = useState({});
+  useEffect(() => {
+    axios
+      .get(
+        `http://18.192.205.152/api/profile/${props.username}`,
+        { crossDomain: true },
+        { withCredentials: true }
       )
+      .then((response) => {
+        setUser(response.data);
+      });
+  }, []);
 
+  return (
+    <div className="comment-image-holder">
+      <p>{user.first_name}</p>
+      <img src={"http://18.192.205.152/" + user.picture} />
+    </div>
+  );
 }
 
-export default ProfilePhoto
+export default ProfilePhoto;

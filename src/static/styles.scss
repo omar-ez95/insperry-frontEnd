@@ -50,7 +50,7 @@ body {
     padding-bottom: 15px;
   }
   .cat-bottom {
-    background: linear-gradient(to bottom, transparent 10%, #08D9D6 100%);
+    background: linear-gradient(to bottom, transparent 0%, #d80c3fa4 100%);
     position: fixed;
     left: 0;
     bottom: 0;
@@ -74,7 +74,7 @@ body {
     position: relative;
   }
   .red-color{
-    color: #252A34 !important;
+    color: #EAEAEA !important;
   }
   .cat-bottom .footer-links li {
     width: 20%;
@@ -377,7 +377,7 @@ body {
 
   }
   .form-control{
-    box-shadow: 0px 0px 5px #08D9D6;
+    box-shadow: 0px 0px 5px #FF2E63;
   }
   
   .mychoise-element {
@@ -415,11 +415,14 @@ body {
     width: 100%;
     object-fit:cover;
     height: 100vh;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: flex-start;
     align-items: center;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
   }
   .restaurant-video-margin{
     margin-left: 0px;
@@ -429,10 +432,22 @@ body {
     overflow-y: auto;
     max-height: 100vh;
     margin-bottom: 40px;
+ 
+  }
+  @media only screen and (max-width: 985px) {
+    .restaurant-modal-padding{
+      padding: 5%;
+    }
+    .restaurant-video{
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
   }
   .restaurant-modal{
     margin-bottom: 20px;
-    background-color: rgba(234, 234, 234, 0.33);
+    // background-color: rgba(234, 234, 234, 0.33);
+    
+    background-color: #d80c3fa4;
     padding: 20px;
     border-radius: 19px;
     box-shadow: 0px 0px 5px #EAEAEA;
@@ -499,10 +514,14 @@ body {
 
 .comments-modal{
   overflow-y: auto;
+  max-height: 400px;
+  padding: 1%;
 }
 .comment-box{
-  border: 1px solid #08D9D6;
-  box-shadow: 0px 0px 5px #08D9D6;
+  border: 1px solid #d80c3fa4;
+  box-shadow: 0px 0px 5px #d80c3fa4;
+  background-color: #EAEAEA;
+  color:#252A34;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -515,15 +534,21 @@ body {
 
 .comment-image-holder{
   margin-right: 5px;
-
+  border-right: 2px solid #d80c3fa4;
+  padding-right: 2px;
+  min-width: 110px;
 }
 
 .comment-image-holder img{
   box-shadow: 0px 0px 5px #EAEAEA;
   position: relative;
-  top: 10px;
+  // top: 10px;
   width: 60px;
   border-radius: 40%;
+  
+}
+.comment-image-holder p{
+  margin-bottom: 0px;
   
 }
 
@@ -535,5 +560,15 @@ body {
 
 
 .card {
-  box-shadow: 0px 0px 5px #08D9D6;
+  box-shadow: 0px 0px 5px #d80c3fa4;
+  border-radius: 15px;
+}
+
+.header-button{
+  background-color: transparent;
+  border: transparent;
+}
+.btn{
+  background-color: #08D9D6;
+  border: none;
 }

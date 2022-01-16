@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react"
-
+import axios from "axios";
 const Context = React.createContext()
 
 function UserContext({children}) {
@@ -10,7 +10,19 @@ function UserContext({children}) {
                                     id:0,
                                     username:'', 
                                 })
-    
+    useEffect(()=>{
+        delete axios.defaults.headers.common["Authorization"];
+
+        let  userData = null
+        if(localStorage.userData ){
+            userData= JSON.parse(localStorage.userData)
+        }
+        if(userData){
+             setIsAuthenticated(true)
+             setToken(userData.token)
+             setUser(userData.user)
+        }
+    },[])
     return (
         <Context.Provider value={{
             token, 
