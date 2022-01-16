@@ -12,6 +12,7 @@ const Header = loadable(() => import('./components/layouts/Header'));
 const Register = loadable(() => import('./components/accounts/Register'));
 const LogIn = loadable(() => import('./components/accounts/LogIn'));
 const Menu = loadable(() => import('./components/menu/Menu'));
+const MyChoice = loadable(() => import('./components/myChoice/MyChoice'));
 
 // import Main from "./pages/Main"
 // import Rescategory from "./pages/Rescategory"
@@ -33,6 +34,8 @@ function App() {
                 <Route exact path="/regestration" element={<Register/>} />
                 <Route exact path="/login" element={<LogIn/>} />
                 <Route exact path="/restaurant/:RestaurantId/menu" element={<Menu/>} />
+                <Route exact path="/MyChoice" element={<MyChoice/>} />
+
             </Routes>
             <Header/>
         </Fragment>
