@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import axios from "axios";
+import loadable from '@loadable/component'
 
 import saveProduct from "../../static/img/saveProduct.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+
+
 
 import { BiSearchAlt } from "react-icons/bi";
 import { SiHomebridge } from "react-icons/si";
@@ -15,7 +15,6 @@ import { BiLogOut } from "react-icons/bi";
 
 import {Context} from "../../contexts/UserContext"
 
-library.add(faUser);
 
 function Header() {
   const {setUser, isAuthenticated, setIsAuthenticated, setToken, token,user} = useContext(Context)

@@ -17,7 +17,7 @@ function ProfilePhoto(props) {
 
   return (
     <div className="comment-image-holder">
-      <p>{user.first_name}</p>
+      <p className="black-color">{user.first_name}</p>
       <img src={"http://18.192.205.152/" + user.picture} />
     </div>
   );

@@ -18,7 +18,7 @@ import Follow from "./Follow"
 function RestaurantDetails() {
   const [show, toggle] = Toggler()
   const { RestaurantId } = useParams();
-  const {user, isAuthenticated, token} = useContext(Context)
+  const {isAuthenticated} = useContext(Context)
   const [restaurant, setRestaurant] = useState({PLZ: "",
   address: "",
   bio: "",  
@@ -101,7 +101,7 @@ function RestaurantDetails() {
         <div>
           <ul className="restaurant-buttons">
             <li><img className="buttons-color" onClick={toggle} src={commentBtn} alt=""/></li>
-            <li><img className="buttons-color" src={menu} alt=""/></li>
+            <li><Link to={`/restaurant/${restaurant.id}/menu`} className="red-color"><img className="buttons-color" src={menu} alt=""/></Link></li>
             <li>{!isAuthenticated ? <Link to="/login" className="red-color">
                   <img className="buttons-color"  src={follow_n} alt=""/>
                   </Link> : restaurant.user ? <Follow restaurant={restaurant.user}/> : null
