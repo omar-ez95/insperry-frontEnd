@@ -22,7 +22,7 @@ function Rescategorys() {
       .then((response) => {
         setRescategorys(response.data);
         setTotalRescategorys(response.data.length);
-      });
+      }).catch(err => console.log(err));
   }, []);
 
   const handleScroll = (event) => {
