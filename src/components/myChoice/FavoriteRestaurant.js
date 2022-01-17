@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import PropTypes from "prop-types";
 import axios from "axios";
 
  import {Context} from "../../contexts/UserContext"
@@ -9,7 +8,7 @@ import Toggler from "../../customHooks/Toggler";
 function FavoriteRestaurant({ favoriteRestaurant }) {
   const [show, toggle] = Toggler();
   const[favoriteProducts,setFavoriteProducts]=useState([])
-  const {isAuthenticated, token,user} = useContext(Context)
+  const {token} = useContext(Context)
 
 
   useEffect(() => {
@@ -24,7 +23,7 @@ function FavoriteRestaurant({ favoriteRestaurant }) {
     return () => {
         setFavoriteProducts([])
     };
-  }, []);
+  }, );
 
   return (
     <div>

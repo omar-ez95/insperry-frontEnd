@@ -13,12 +13,12 @@ function ProfilePhoto(props) {
       .then((response) => {
         setUser(response.data);
       });
-  }, []);
+  }, [props.username]);
 
   return (
     <div className="comment-image-holder">
       <p className="black-color">{user.first_name}</p>
-      <img src={"http://18.192.205.152/" + user.picture} />
+      <img src={"http://18.192.205.152/" + user.picture} alt="" />
     </div>
   );
 }

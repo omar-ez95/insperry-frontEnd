@@ -12,6 +12,7 @@ function UserContext({children}) {
                                 })
     useEffect(()=>{
         delete axios.defaults.headers.common["Authorization"];
+        localStorage.clear()
 
         let  userData = null
         if(localStorage.userData ){

@@ -1,6 +1,5 @@
 import React, { useEffect, useContext, useState } from "react";
-import { useParams } from "react-router-dom";
-import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom"
 import axios from "axios";
 
 import {Context} from '../../contexts/UserContext'
@@ -8,13 +7,24 @@ import ProfilePhoto from "../profile/ProfilePhoto";
 function ProductComments({id,restaurant}){
     const {user, isAuthenticated} = useContext(Context)
     const [comments,setComments]= useState([])
-    const [owner,setOwner]= useState(parseInt(user.id))
+    const [owner]= useState(parseInt(user.id))
     const [body,setBody]= useState('')
-    const [date,setDate]= useState(new Date)
+    const [date]= useState(new Date())
+    const navigate = useNavigate();
 
-    useEffect(()=>{
+    useEffect(() => {
+      if (isAuthenticated === false) {
+        navigate("/login");
+      }
+      const getProductComments = ()  => {
+        axios.get(`http://18.192.205.152/api/product_comments/${id}`)
+        .then(res => {
+
+           setComments(res.data)
+        }).catch(err => console.log(err));
+      }
         getProductComments()
-    },[])
+    },[id,isAuthenticated,navigate])
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -41,13 +51,7 @@ function ProductComments({id,restaurant}){
       };
             
   
-      const getProductComments = ()  => {
-          axios.get(`http://18.192.205.152/api/product_comments/${id}`)
-          .then(res => {
-
-             setComments(res.data)
-          }).catch(err => console.log(err));
-        }
+      
 
         const commentsList = comments.map((comment) => (
             <div className="comment-box" key={comment.id}>

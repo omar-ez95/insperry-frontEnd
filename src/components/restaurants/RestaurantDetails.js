@@ -69,20 +69,20 @@ function RestaurantDetails() {
         setRestaurant(response.data[0]);
         
       });
-  }, []);
+  }, [RestaurantId]);
 
-  const video = (
-    <video
-      controls
-      autoPlay
-      loop
-      muted
-      className="restaurant-video restaurant-video-margin"
-    >
-      <source src={restaurant.video} type="video/mp4" />
-    </video>
-  );
-    const follow = (<li><Follow restaurant={restaurant.id}/></li>)
+  // const video = (
+  //   <video
+  //     controls
+  //     autoPlay
+  //     loop
+  //     muted
+  //     className="restaurant-video restaurant-video-margin"
+  //   >
+  //     <source src={restaurant.video} type="video/mp4" />
+  //   </video>
+  // );
+
   return (
     <Row>
       <Col xs="12" s="12" lg="4" >
@@ -91,6 +91,7 @@ function RestaurantDetails() {
         <img
           src={restaurant.logo}
           className="restaurant-logo"
+          alt=""
         /> 
           <h1 className="restaurant-name">{restaurant.name}</h1>
         </div>

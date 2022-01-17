@@ -21,18 +21,13 @@ function Register(props) {
     if(isAuthenticated){
       navigate("/");
      }
-  }, [isAuthenticated])
+  }, [isAuthenticated,navigate])
 
   const registeration = ({ username, password, email }) => {
     var formData = new FormData();
     formData.append("username", username); 
     formData.append("password", password); 
     formData.append("email", email); 
-    const config = {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    };
     axios.defaults.xsrfCookieName = 'csrftoken'
     axios.defaults.xsrfHeaderName = 'X-CSRFToken'
     axios

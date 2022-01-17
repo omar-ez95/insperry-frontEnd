@@ -7,7 +7,7 @@ import FavoriteRestaurant from "./FavoriteRestaurant"
 
 function MyChoice () {
     const [favoriteRestaurants, setFavoriteRestaurants]=useState([])
-    const {isAuthenticated, token,user} = useContext(Context)
+    const {isAuthenticated, token} = useContext(Context)
 
     const navigate = useNavigate()
 
@@ -21,7 +21,7 @@ function MyChoice () {
 
         setFavoriteRestaurants(res.data)
     }).catch(err => console.log(err));
-    },[])
+    },[token,navigate,isAuthenticated])
 
     return (
       <div>

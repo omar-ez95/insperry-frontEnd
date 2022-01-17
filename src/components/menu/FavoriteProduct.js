@@ -1,16 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 import saveProductActive from "../../static/img/saveProductActive.png";
 import saveProduct from "../../static/img/saveProduct.png";
 
-import Toggler from "../../customHooks/Toggler";
+
 import { Context } from "../../contexts/UserContext";
 
 function FavoriteProduct(props) {
-  const { user, isAuthenticated, token } = useContext(Context);
+  const { isAuthenticated, token } = useContext(Context);
 
   const [favoriteProduct, setFavoriteProduct] = useState({
     check: null,
@@ -43,7 +42,7 @@ function FavoriteProduct(props) {
     if (isAuthenticated) {
       getFavoriteProduct(f);
     }
-  }, []);
+  }, );
   // componentDidMount() {
   //     const h = store.getState();
 
@@ -62,7 +61,7 @@ function FavoriteProduct(props) {
   return (
     <div>
       {isAuthenticated ? (
-        favoriteProduct.check == "true" ? (
+        favoriteProduct.check === "true" ? (
           <img className="buttons-color"
             type="button"
             onClick={checkFavoriteProduct}

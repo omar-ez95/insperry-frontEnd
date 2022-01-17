@@ -1,12 +1,11 @@
 
-import React, { useState, useContext, useEffect,lazy, Suspense } from 'react';
+import React, {  useContext, useEffect } from 'react';
 import { Col, Row,  } from "react-bootstrap";
-import axios from "axios";
 import { Link } from 'react-router-dom';
 import loadable from '@loadable/component'
 
 import commentBtn from "../../static/img/commentBtn.png";
-import ProfilePhoto from "../profile/ProfilePhoto";
+
 
 import Toggler from "../../customHooks/Toggler"
 import {Context} from '../../contexts/UserContext'
@@ -15,16 +14,10 @@ const FavoriteProduct = loadable(() => import('./FavoriteProduct'));
 const ProductComments = loadable(() => import('../comments/ProductComments'));
 
 
-
-
-
-
-
-const renderLoader = () => <p>Loading</p>;
 function ProductComponent ({product}) {
 
     const [show, toggle] = Toggler()
-    const {user, isAuthenticated, token} = useContext(Context)
+    const { isAuthenticated} = useContext(Context)
 
     useEffect(()=>{
 
@@ -37,11 +30,11 @@ function ProductComponent ({product}) {
                     <h1>{product.name}</h1>
                     </Col>
                     <Col xs="2" lg="2">
-                     <FavoriteProduct key={product.pk != undefined ? product.pk : product.id} id={product.pk != undefined ? product.pk : product.id} />
+                     <FavoriteProduct key={product.pk !== undefined ? product.pk : product.id} id={product.pk !== undefined ? product.pk : product.id} />
                         </Col>
                     <Col xs="2" lg="2">
                     { 
-                    isAuthenticated   ? <img className="buttons-color" src={commentBtn} onClick={toggle} /> :
+                    isAuthenticated   ? <img className="buttons-color" src={commentBtn} onClick={toggle} alt="noPhoto" /> :
                     <Link to="/login" >          
                         <img  className="buttons-color" src={commentBtn} alt=""/> 
                     </Link> 
@@ -70,7 +63,7 @@ function ProductComponent ({product}) {
                 
                  <div>
                     
-                    {show ?<ProductComments id={product.pk != undefined ? product.pk : product.id} restaurant={product.restaurant} /> : null}
+                    {show ?<ProductComments id={product.pk !== undefined ? product.pk : product.id} restaurant={product.restaurant} /> : null}
                 </div> 
                 
             </div>

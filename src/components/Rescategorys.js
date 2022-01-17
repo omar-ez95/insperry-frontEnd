@@ -43,7 +43,7 @@ function Rescategorys() {
       setLoading(false);
     };
     loadCategorys();
-  }, [currentPage,rescategorys]);
+  }, [currentPage,rescategorys,categoryPerPage]);
 
   const cards = showCategory.map((rescategory) => (
     <Card

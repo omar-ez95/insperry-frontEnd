@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
@@ -20,17 +19,12 @@ function LogIn(props) {
     if(isAuthenticated){
       navigate("/");
      }
-  }, [isAuthenticated])
+  }, [isAuthenticated,navigate])
 
   const logIn = () => {
     var formData = new FormData();
     formData.append("username", username); 
     formData.append("password", password); 
-    const config = {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    };
     axios.defaults.xsrfCookieName = 'csrftoken'
     axios.defaults.xsrfHeaderName = 'X-CSRFToken'
     axios

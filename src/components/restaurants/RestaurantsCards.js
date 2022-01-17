@@ -16,7 +16,7 @@ function RestaurantsCards(){
             setRestaurants( response.data)
       });
 
-  }, [])
+  }, )
 
     const cards = restaurants.map(
         restaurant => (     

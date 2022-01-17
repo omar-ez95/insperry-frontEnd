@@ -1,8 +1,9 @@
-import { useContext } from "react";
+import React, { useContext }  from 'react';
+
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
+
 import axios from "axios";
-import loadable from '@loadable/component'
+
 
 import saveProduct from "../../static/img/saveProduct.png";
 
@@ -17,7 +18,7 @@ import {Context} from "../../contexts/UserContext"
 
 
 function Header() {
-  const {setUser, isAuthenticated, setIsAuthenticated, setToken, token,user} = useContext(Context)
+  const {setUser, isAuthenticated, setIsAuthenticated, setToken, token} = useContext(Context)
 
 
   const logout = ()  => {
@@ -56,6 +57,9 @@ function Header() {
         setToken('')
         setUser(null)
         localStorage.clear()
+        console.log(localStorage,'localll')
+        console.log(axios.defaults.headers,'axiosss')
+
         delete axios.defaults.headers.common["Authorization"]; 
         // props.history.push("/");
       })

@@ -3,20 +3,20 @@ import axios from "axios";
 
 import { Context } from "../../contexts/UserContext";
 
-import ProfilePhoto from "../profile/ProfilePhoto";
+
 
 function RestaurantCommentsForm(props) {
   const [body, setBody] = useState("");
   const [userId, setUserId] = useState(0);
   const [restaurant, setRestaurant] = useState(0);
-  const [date, setDate] = useState(new Date());
+  const [date] = useState(new Date());
 
-  const { user, isAuthenticated, token } = useContext(Context);
+  const { user } = useContext(Context);
 
   useEffect(() => {
     setRestaurant(props.restaurant);
     setUserId(user.id);
-  }, []);
+  }, [props.restaurant,user.id]);
   const onSubmit = (e) => {
     e.preventDefault();
     var formData = new FormData();

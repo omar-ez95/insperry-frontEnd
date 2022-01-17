@@ -1,7 +1,5 @@
-import React, { useEffect, useContext, useState } from "react";
-import { useParams } from "react-router-dom";
-import PropTypes from "prop-types";
-import axios from "axios";
+import React from "react";
+
 
 import Toggler from "../../customHooks/Toggler"
 import Products from "./Products";
@@ -18,7 +16,6 @@ function Category(props) {
       </div>
       {show ? (
         <div className="content">
-          <h1>nonononmonos</h1>
           <Products
             id={props.category.id}
             restaurant={props.category.restaurant}

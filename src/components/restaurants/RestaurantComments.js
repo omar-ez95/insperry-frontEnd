@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-import profile from "../../static/img/profile.png";
 
 import ProfilePhoto from "../profile/ProfilePhoto";
 import { Context } from "../../contexts/UserContext";
@@ -16,7 +15,7 @@ function RestaurantComments(props) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (isAuthenticated == false) {
+    if (isAuthenticated === false) {
       navigate("/login");
     }
     axios
@@ -28,7 +27,7 @@ function RestaurantComments(props) {
       .then((response) => {
         setComments(response.data);
       });
-  }, []);
+  }, );
 
   const commentsList = comments.map((comment) => (
     <div className="comment-box" key={comment.id}>

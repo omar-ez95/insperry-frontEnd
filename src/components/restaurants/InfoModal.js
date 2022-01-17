@@ -1,8 +1,8 @@
+import React from 'react';
 import wifi from "../../static/img/wifi.png";
 import plug from "../../static/img/plug.png";
-import wheelchair from "../../static/img/wheelchair.svg";
 import card from "../../static/img/card.png";
-import dog from "../../static/img/dog.svg";
+
 import coin from "../../static/img/coin.png";
 import wpay from "../../static/img/wpay.png";
 import visa from "../../static/img/visa.png";
@@ -10,7 +10,6 @@ import paypal from "../../static/img/paypal.png";
 import amazonpay from "../../static/img/amazonpay.png";
 import maestro from "../../static/img/maestro.png";
 import babyCarriage from "../../static/img/babyCarriage.png";
-import cancel from "../../static/img/cancel.png";
 import zeit from "../../static/img/zeit.png";
 import Lampe from "../../static/img/Lampe.png";
 import eco from "../../static/img/eco.png";
@@ -132,12 +131,12 @@ function InfoModal({restaurant}){
               <li data-target="#carouselExampleIndicators1" data-slide-to="1">
                 <img src={Lampe} className="restaurant-modal-info-btn" alt="" />
               </li>
-              {restaurant.recycel == true ? (
+              {restaurant.recycel === true ? (
                 <li data-target="#carouselExampleIndicators1" data-slide-to="2">
                   <img className="restaurant-modal-info-btn" src={eco} alt="" />
                 </li>
               ) : null}
-              {restaurant.regional == true ? (
+              {restaurant.regional === true ? (
                 <li data-target="#carouselExampleIndicators1" data-slide-to="3">
                   <img
                     className="restaurant-modal-info-btn"
@@ -146,7 +145,7 @@ function InfoModal({restaurant}){
                   />
                 </li>
               ) : null}
-              {restaurant.vegi == true ? (
+              {restaurant.vegi === true ? (
                 <li data-target="#carouselExampleIndicators1" data-slide-to="4">
                   <img
                     className="restaurant-modal-info-btn"
@@ -163,25 +162,25 @@ function InfoModal({restaurant}){
                   data-target="#carouselExampleIndicators"
                   data-slide-to={index + 1}
                 >
-                  {info == "Free WIFI" ? (
+                  {info === "Free WIFI" ? (
                     <img className="liWidth" src={wifi} alt="" />
-                  ) : info == "STECKDOSEN" ? (
+                  ) : info === "STECKDOSEN" ? (
                     <img className="liWidth" src={plug} alt="" />
-                  ) : info == "BABY FREUNDLICH" ? (
+                  ) : info === "BABY FREUNDLICH" ? (
                     <img className="liWidth" src={babyCarriage} alt="" />
-                  ) : info == "Table Games" ? (
+                  ) : info === "Table Games" ? (
                     <img className="liWidth" src={card} alt="" />
-                  ) : info == "Coin" ? (
+                  ) : info === "Coin" ? (
                     <img className="liWidth" src={coin} alt="" />
-                  ) : info == "WPAY" ? (
+                  ) : info === "WPAY" ? (
                     <img className="liWidth" src={wpay} alt="" />
-                  ) : info == "VISA" ? (
+                  ) : info === "VISA" ? (
                     <img className="liWidth" src={visa} alt="" />
-                  ) : info == "PAYPAL" ? (
+                  ) : info === "PAYPAL" ? (
                     <img className="liWidth" src={paypal} alt="" />
-                  ) : info == "AMAZONPAY" ? (
+                  ) : info === "AMAZONPAY" ? (
                     <img className="liWidth" src={amazonpay} alt="" />
-                  ) : info == "MAESTRO1" ? (
+                  ) : info === "MAESTRO1" ? (
                     <img className="liWidth" src={maestro} alt="" />
                   ) : null}
                 </li>

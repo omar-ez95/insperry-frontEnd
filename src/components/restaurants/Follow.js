@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom"
 import axios from "axios";
 
 import follow_n from '../../static/img/follow_n.png';
@@ -10,7 +10,7 @@ import {Context} from "../../contexts/UserContext"
 function Follow(props) {
     const [follow, setFollow]=useState([])
     const [restaurantId,setRestaurantId]=useState(0)
-    const {user, isAuthenticated, token} = useContext(Context)
+    const {isAuthenticated, token} = useContext(Context)
 
     const checkFollow = () => {
         const f = {
@@ -19,8 +19,12 @@ function Follow(props) {
         }
         getFollow(f);
     };
+    const navigate = useNavigate();
 
-    useEffect(()=>{
+    useEffect(() => {
+      if (isAuthenticated === false) {
+        navigate("/login");
+      }
         setRestaurantId(props.restaurant)
         const f = {
             option : 0,
@@ -29,7 +33,7 @@ function Follow(props) {
         if(restaurantId){
             getFollow(f)
         }
-    },[restaurantId])
+    },[isAuthenticated])
 
     // axios.get(`http://18.192.205.152:8000/app/api/follow/${f.id}/`,{option:f.option},{crossDomain: true,headers: {
     //         'Content-Type': 'application/json',
@@ -65,7 +69,7 @@ function Follow(props) {
 
         return (       
             <div>
-                { follow.follow == 'true' ? <img  type="button" className="buttons-color" onClick={checkFollow} src={follow_active} alt=""/> : <img  type="button" className="buttons-color" onClick={checkFollow} src={follow_n} alt=""/> }
+                { follow.follow === 'true' ? <img  type="button" className="buttons-color" onClick={checkFollow} src={follow_active} alt=""/> : <img  type="button" className="buttons-color" onClick={checkFollow} src={follow_n} alt=""/> }
             </div>
         )
 
